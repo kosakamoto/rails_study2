@@ -1,0 +1,35 @@
+<% provide(:title, '画像') %>
+<h1>みるくの画像</h1>
+<p>うちの可愛い愛犬だ！</p>
+<%= image_tag 'miruku01.JPG', :mouseover =>'miruku02.JPG', :size =>'320x480' %>
+<p>--> <img alt="写真" src="/app/assets/images/miruku01.JPG"　class= miruku /></p>
+
+<%#
+
+二個目のpタグの内容は、html.erb上で画像を表示する方法である3行目の
+内容を「html上ではこう書く(表示される)」と説明したもの。
+
+ちなみに、sizeについては別個に指定することも可能で、その場合は
+「:wigth =>'〜〜px', :height =>'〜〜px'」と入力してやると良い。
+ただ、上のようにまとめて入力する場合、アスタリスク(*)ではなく小文字のエックス(x)を
+間に挟む。
+
+「:mouseover =>'画像ファイル名'」で、マウスが乗った時に違う画像を
+表示することも可能。
+・・・なぜか変わらないんだけど。
+
+本当は、なぜかcloud9に画像をアップすると角度が変わっちまったので、
+transform: rotate(〜〜deg);
+・・・を利用して直したかったが、うまくいかない。
+:transform:rotate(90deg)　も、
+:transform:rotate =>'90deg' も、
+:transform:rotate =>(90deg)　も、
+:transform =>:rotate =>(90deg)　も、ダメ。
+画像自体を編集する機能がcloud9にもあるので、それでやったほうが早い。
+
+<%= link_to image_tag 'miyuku01.JPG', '/static_pages/home' %>
+<%#
+上のようにすることで、画像にリンクをはっつけることができる。
+この場合、homeにつながる。
+・・・はずだが、今回も失敗。なぜだ・・・・
+%>

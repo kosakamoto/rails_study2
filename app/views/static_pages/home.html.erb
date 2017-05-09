@@ -1,6 +1,13 @@
 <%#
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+以下の<% provide(:title, 'ホーム')>で、layout/application.html.erbで
+yield(:title)で取得したいtitle部分に文字列「ホーム」を代入している。
+これで、home.html.erbを表示する場合においてはタイトルも変化して
+「RailsStudy2 | ホーム」となる。
 %>
-<h1>ホーム画面</h1>
-<p>簡易RPGをこれに作れるか実験</p>
+
+<% provide(:title, 'ホーム') %>
+<h1>サンプルアプリ</h1>
+<p>
+    これは<a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+    学習用のサンプルアプリケーションのホームページです。
+</p>
