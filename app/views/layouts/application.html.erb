@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RailsStudy2 | <%= yield(:title) %></title>
+  <title><%= full_title(yield(:title)) %></title>
+<!--
+上はapplication_helper.rbにあるmoduleを適用している。
+full_title(page_title)に当てはまるようにするため、page_title = yield(:title)と
+なっている。
+-->
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
